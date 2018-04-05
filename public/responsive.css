@@ -1,0 +1,18 @@
+@media screen and (max-width: 1024px) {
+  #wrapper{width: auto;}
+
+}
+@media screen and (max-width: 480px) {
+  #login{width: 100%;}
+  #menu li{margin-bottom: 5px}
+  #listMessager{height: 205px;}
+}
+@media screen and (max-width: 768px) {
+  #menu li{margin-bottom: 5px}
+}
+@media screen and (max-width: 320px) {
+  #login{width: 100%;}
+  #listMessager{height: 130px;}
+  #boxTitle{font-size: 14px;}
+  #menu li{margin-bottom: 5px}
+}

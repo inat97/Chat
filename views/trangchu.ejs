@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chat Online</title>
+  <script src ="jquery-3.2.1.min.js"></script>
+  <script src ="socket.io/socket.io.js" ></script>
+  <script src="xuly.js"></script>
+  <link rel = "stylesheet" type = "text/css" href ="layout.css" />
+  <link rel = "stylesheet" type = "text/css" href ="responsive.css" />
+
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Varela+Round">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Varela+Round">
+
+</head>
+<body>
+  <div id="banner"><h1>WEB CHAT</h1></div>
+
+<div id = "wrapper">
+    <div id="loginForm">
+      <div id="login">
+    		<h2><span class="fontawesome-lock"></span>Sign In</h2>
+    		<form action="javascript:void(0);" method="POST">
+    			<fieldset>
+    				<p><label for="email">Your Name</label></p>
+    				<p><input type="text" class = "txtUserName"  value="mail@address.com" onBlur="if(this.value=='')this.value='mail@address.com'" onFocus="if(this.value=='mail@address.com')this.value=''"></p>
+    				<!-- <p><label for="password">Password</label></p>
+    				<p><input type="password" id="password" value="password" onBlur="if(this.value=='')this.value='password'" onFocus="if(this.value=='password')this.value=''"></p> -->
+    				<p><input type="submit" id = "btnRegister" value="Sign In"></p>
+    			</fieldset>
+    		</form>
+
+    	</div> <!-- end login -->
+    </div>
+
+    <div id="chatForm">
+      <div id = "menu">
+          <ul>
+      			<li><a href="https://tangau.herokuapp.com" ><img src="home.ico" height="13px"> Trang chủ</a></li>
+      			<li><a >Giới thiệu</a></li>
+      			<li><a href="send" target="blank" > Góp ý</a></li>
+      			<li><a href="https://m.me/nguyenanhtuan.0309" target="blank" >Liên hệ</a></li>
+      		</ul>
+        </div>
+        <div id  = "left">
+            <div id="boxTitle">Danh sách online</div>
+            <div id="boxContent"> </div>
+          <!-- <div id = "dem">
+                <a href="/" alt="page hit counter" target="_blank" >
+                <embed src="http://s10.histats.com/10.swf"  flashvars="jver=1&acsid=3903777&domi=4"  quality="high"  width="200" height="40" name="10.swf"  align="middle" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" wmode="transparent" /></a>
+                <img  src="//sstatic1.histats.com/0.gif?3903777&101" alt="free site statistics" border="0">
+          </div> -->
+        </div>
+
+        <div id  = "right">
+            <div id="sayHi">Xin chào <span id = "currenUser">Tuan</span>
+                <input type="button" id= "btnLogout" value="LOGOUT">
+            </div>
+            <div id ="listMessager">
+            </div>
+            <div id ="thongbao"></div>
+                  <input type= "text" id = "txtMessage" placeholder="  Nhập tin nhắn..." onfocus="this.placeholder = ''"
+onblur="this.placeholder = '  Nhập tin nhắn...'" />
+                  <input type = "button" id = "btnSendMessage" value="Send" />
+        </div>
+    </div>
+  <div id ="footer">
+          <p> © Copyright 2017 Nguyen Anh Tuan <br/>All rights reserved </p>
+   </div>
+
+</div>
+</body>
+</html>
